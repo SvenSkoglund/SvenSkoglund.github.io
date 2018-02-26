@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <title>‘=’ vs ‘==’ vs ‘.equals’</title>
+  <body>
+    <h1>
+    <em>‘=’ vs ‘==’ vs ‘.equals’</em>
+  </h1>
+
+  <p>
+  <strong> In this blog post I would like to discuss the difference between "=" and "==" and ".equals()" when programming in java. First I will explain "=".
+  </strong>
+</p>
+<p>
+    <strong>
+When we use an "=" we are using it for <em>ASSIGNMENT</em>. This means that the "=" allows us to <em>ASSIGN</em> a value to a variable. For example, int A = 12; would tell java to "Create a variable called A and give it a value of 12". If later in the code we wrote "A = 0;" we would be telling java "Give variable A a value of 0". This would overwrite the previous value of 12 that was stored in vatiable A.
+</strong>
+</p>
+<p>
+      <strong>
+If we are using a "==", this means that we are testing for <em>EQUIVALENCY</em>. We are no longer assigning a value to a variable, but are instead checing to see if the value in stored in the variable is the same as another value. We return <em>TRUE</em> if it matches and <em>false</em> if it does not. Lets look at variable A again for an example. If we wrote a code that said "if (A == 0){x}" we are saying to java. If variable A has a value of 0 stored inside, run x. If we wrote "do {x} while (A == 12)", we are telling java "do x while A the value stored in A is 12". We are not assigning values to A using "==" but are instead checking to see if the value already assigned to A equals something else.
+  </strong>
+  </p>
+  <p>
+        <strong>
+Finally, we will look at ".equals()". This version of an equals is used to check for equal values being stored in two differnt objects. In "==" we were checking to see whether the objects were the same. In ".equals()" we are checking to see if the values stored in two <em>different</em> objects are equal. This comes up especially when comparing strings. I will do my best to explain this. Lets imagine you had String A = "Happy"; and also String B = "Happy";. If we use an "==" on A and B it will return false, even though they contain the same string, because A and B are two separate objects. However, if we write A.equals(B); this will return true, because we are checking the values stored inside objects A and B for equivalency. We do not have to use this when dealing with integers, and other non-string, numerical data types, because if A = 0; then A is essentially the same object as 0. When java looks for A it is pointed to the same data as when it is pointed to 0. A and 0 are essentially different names for the same piece of memory. With the example of A ="Happy"; and B ="Happy"; java creates two separate pieces of data, stores them in memory, and points to 1 chunk of data containing "Happy" when A is called, and a different chunk of data containing "Happy" when B is called. I know this is confusing, but it will make more sense as you practice and inevitably run into the problems that come from comparing Strings using "==".
+    </strong>
+    </p>
+
+
+  </body>
+</html>
